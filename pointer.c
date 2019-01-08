@@ -1,3 +1,7 @@
+
+
+#if(0)
+
 #include<stdio.h>
 int main()
 {
@@ -6,7 +10,7 @@ int main()
 	printf("%p\n",x);
 }
 
-
+#endif
 
 
 
@@ -246,7 +250,6 @@ int main()
 #endif
 
 
-#if(0)
 
 #include<stdio.h>
 	int main()
@@ -258,7 +261,6 @@ int main()
 		scanf("%d",ptr);            // here printing a value in it (ptr) //
 		printf("%d , %d\n",*ptr,ptr);
 	}
-#endif
 
 #if(0)
 
