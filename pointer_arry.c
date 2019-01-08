@@ -1,18 +1,18 @@
 #include<stdio.h>
 int main()
 {
-	int *p;
-	int (*ptr)[5];
+	int *p; // it can points to an integer //
+	int (*ptr)[5]; // it is pointer to an array of 5 integers,it act as 2d-Array of 5 integrs //
 	int arr[5]={1,2,3,4,5};
-	p=arr;
-	ptr=&arr;
-	printf("p=%p,ptr=%p\n",p,ptr);
-	printf("p=%d,ptr=%d\n",*p,*ptr);
-	printf("size  p=%d,ptr=%d\n",sizeof(p),sizeof(ptr));
-	printf("size  p=%d,ptr=%d\n",sizeof(*p),sizeof(*ptr));
+	p=arr;  // points to 0th element of an array  \\\arr =  &arr[0]//
+	ptr=arr; // points to the whole array of 5 integer //
+	printf("p=%u,ptr=%u\n",p,ptr);
+	printf("p=%d,ptr=%d\n",*p,**ptr);
+	printf("size  p=%d,ptr=%d\n",sizeof(p),sizeof(ptr));  // p= 4 ptr = 4 //
+	printf("size  p=%d,ptr=%d\n",sizeof(*p),sizeof(*ptr)); // p = 4 ptr = 20 //
 	p++;
 	ptr++;
-	printf("p=%p,ptr=%p\n",p,ptr);
+	printf("p=%u,ptr=%u\n",p,ptr);
 	printf("p=%d,ptr=%d\n",*p,*ptr);
 }
 
